@@ -1,0 +1,31 @@
+<html>
+	<body>
+		<head>
+			<meta charset="utf-8">
+			<title>	Exercício 3 </title>
+		</head>
+		<b>Faça um programa que receba dois números e mostre o menor.</b>
+		<p>
+			n1 <input type="number" id="n1"/>
+			<br/>
+			n2 <input type="number" id="n2"/>
+			<br/>
+			<button onclick="brinca()"> Calcular </button>
+			<br/>
+			<b id="menor"> </b>
+			<br>
+			<script>
+				function brinca(){
+					var n1 = parseFloat(document.getElementById("n1").value);
+					var n2 = parseFloat(document.getElementById("n2").value);
+					if (n1 > n2 ){
+						document.getElementById("menor").innerHTML = "O menor é " + n2;
+					}
+						else {
+							document.getElementById("menor").innerHTML = "O menor é " + n1;
+						}
+					}
+			</script>
+		</p>
+	</body>
+</html>

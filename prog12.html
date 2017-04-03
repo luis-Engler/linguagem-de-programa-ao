@@ -1,0 +1,48 @@
+<html>
+	<head> 
+		<meta charset="utf-8"/>
+		<title> Exercício 12 </title>
+	</head>
+	<body>
+		<h1>Salário</h1>
+		<p>
+			Digite o Salário bruto <input type="number" id="salbr"/>
+		
+			<br/>
+			<button onclick="ver()"> calculo </button>	
+			<br/>
+			
+			
+			<script>
+		function ver(){
+			// recupera conteúdo do elemento
+			var salb = parseFloat (document.getElementById("salbr").value);
+			var salg = 0 
+			var sald = 0
+			
+			if (salb<=350) {
+					salg = salb + 100;
+					sald = ((salg * 7)/100)-salg*-1;
+					document.write(sald);
+			}
+			else if(salb>350 && salb<600) {
+					salg = salb + 75;
+					sald = ((salg * 7)/100)-salg*-1;
+					document.write(sald);
+				}
+				else if(salb>=600 && salb <=900) {
+					salg = salb + 50;
+					sald = ((salg *7 )/100)-salg*-1;
+					document.write(sald);
+					}
+					else if (salb>900){
+							salg = salb + 35;
+							sald = ((salg * 7)/100)-salg*-1;
+							document.write(sald);
+						}
+		}
+		</script>
+			
+		</p>
+	</body>
+</html>

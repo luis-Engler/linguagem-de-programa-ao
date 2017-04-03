@@ -1,0 +1,39 @@
+<html>
+	<body>
+		<head>
+			<meta charset="utf-8">
+			<title>	Exercício 4 </title>
+		</head>
+		<b>Faça um programa que receba três números e mostre o maior.</b>
+		<p>
+			n1 <input type="number" id="n1"/>
+			<br/>
+			n2 <input type="number" id="n2"/>
+			<br/>
+			n3 <input type="number" id="n3"/>
+			<br/>
+			<button onclick="brinca()"> Calcula </button>
+			<br/>
+			<b id="maior"> </b>
+			<br>
+			<script>
+				function brinca(){
+					var n1 = parseFloat(document.getElementById("n1").value);
+					var n2 = parseFloat(document.getElementById("n2").value);
+					var n3 = parseFloat(document.getElementById("n3").value);
+					document.getElementById("maior").innerHTML = maior;
+
+					if ((n1 > n2) && (n2 > n3)){
+						document.getElementById("maior").innerHTML = "Primeiro número é maior " + n1;
+					}
+						else if ((n2 > n1) &&(n2 > n3)){
+							document.getElementById("maior").innerHTML = "Segundo número é maior " + n2;
+						}
+							else{
+								document.getElementById("maior").innerHTML = "Terceiro número é maior " + n3;
+							}
+					}
+			</script>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>	Exercício 15 </title>
+	</head>
+		<body>
+			<h1>Exercício 15 </h1>
+			<h3>Digite o valor do investimento </h3>
+				<input type="number" id="n1">
+			<br>
+			<h3> Opção </h3>
+			<select id="opcao">
+				<option value="1">Poupança</option>
+				<option value="2">Fundo de renda fixa</option>
+			</select>
+			<button onclick="brinca()"> Calcular </button>
+			<h2 id="resposta"> </h2>
+			<script>
+				function brinca(){
+					// recupera informação do usuario
+					var n1 = parseFloat(document.getElementById("n1").value);
+					var op = parseFloat(document.getElementById("opcao").value);
+
+					switch(op){
+						case 1: poupanca = (n1*0.03) + n1
+							document.getElementById("resposta").innerHTML = "Resposta " + poupanca;
+							break;
+						case 2: renda = (n1*0.04) + n1
+							document.getElementById("resposta").innerHTML = "Resposta " + renda;
+							break;
+					}
+				}
+			</script>
+		</body>
+</html>

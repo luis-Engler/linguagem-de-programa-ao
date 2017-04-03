@@ -1,0 +1,40 @@
+<html>
+	<body>
+		<head>
+			<meta charset="utf-8">
+			<title>	Exercício 9 </title>
+		</head>
+		<b>Faça um programa que receba o saldo médio de um cliente e calcule o valor do crédito, de acordo com a tabela. Mostre o saldo médio e o valor do crédito.</b>
+		<p>
+			Digite seu Saldo Médio no último ano: <input type="number" id="n1"/>
+			<br/>
+			<button onclick="brinca()"> Calcular </button>
+			<br>
+			<b id="credito"> </b>
+			<script>
+				function brinca(){
+					var n1 = parseFloat(document.getElementById("n1").value);
+					var credito;
+					document.getElementById("credito").innerHTML = credito;
+
+					if (n1 <= 200){
+						credito = (n1*0.1) + n1;
+						document.getElementById("credito").innerHTML = "Resposta " + credito;
+					}
+						else  if ((n1 > 200) && (n1 <= 300)){
+								credito = (n1*0.2) + n1;
+								document.getElementById("credito").innerHTML = "Resposta " + credito;
+						}
+							else if ((n1 > 300) && (n1 <= 400)){
+								credito = (n1*0.25) + n1;
+								document.getElementById("credito").innerHTML = "Resposta " + credito;
+							}
+								else{
+									credito = (n1*0.3) + n1;
+									document.getElementById("credito").innerHTML = "Resposta " + credito;
+								}
+			}
+			</script>
+		</p>
+	</body>
+</html>

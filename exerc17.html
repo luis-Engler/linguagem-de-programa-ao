@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<head>
+			<meta charset="utf-8">
+			<title>	Exercício 17 </title>
+		</head>
+		<h1>SENHA</h1>
+		<p>
+			Digite a senha: <input type="number" id="n1"/>
+			<br/>
+			<button onclick="brinca()"> Calcular </button>
+			<br>
+			<b id="senha"> </b>
+			<script>
+				function brinca(){
+					var n1 = parseFloat(document.getElementById("n1").value);
+					if (n1 == 4531){
+						document.write("Acesso permitido");
+					}
+						else {
+							document.write("Acesso negado")
+						}
+				}
+			</script>
+		</p>
+	</body>
+</html>

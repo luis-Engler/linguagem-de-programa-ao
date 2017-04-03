@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>	Exercício 7 </title>
+	</head>
+		<body>
+			<h1>Exercício 7 </h1>
+			<h3>Salário do Funcionário </h3>
+			<input type="number" id="salario">
+			<br>
+			<button onclick="brinca()"> Calcular </button>
+			<h2 id="resposta"> </h2>
+			<script>
+				function brinca(){
+					// recupera informação do usuario
+					var sal = parseFloat(document.getElementById("salario").value);
+					if (sal < 500){
+						novosal = sal + (sal*30)/100
+						document.getElementById("resposta").innerHTML = "Novo Salário " + novosal;
+					}
+						else {
+								document.getElementById("resposta").innerHTML = "Não tem direiro a aumento";
+						}
+				}
+			</script>
+		</body>
+</html>

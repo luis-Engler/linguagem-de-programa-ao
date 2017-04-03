@@ -1,0 +1,35 @@
+<html>
+	<head> 
+		<meta charset="utf-8"/>
+		<title> Exercício 8 </title>
+	</head>
+	<body>
+		<h1> salario </h1>
+		<p>
+			Digite seu salário atual <input type="number" id="salario"/>			
+			<br/>
+			<button onclick="rej()"> calcular </button>	
+			<br>
+			<b id="salario1"> </b>
+			<script>
+		        function rej(){
+				// recupera conteúdo do elemento
+					var sal = parseFloat(document.getElementById("salario").value);
+					
+					var nsal;
+				
+					if (sal<=300) {
+						nsal = ((sal*35)/100)+sal; 
+						document.getElementById("salario1").innerHTML = "Seu novo salário é " + nsal;	
+					}
+				
+					else if (sal>300) {
+						nsal = ((sal*15)/100)+sal
+						document.write(nsal);	
+					}
+				}		
+			</script>
+			
+		</p>
+	</body>
+</html>

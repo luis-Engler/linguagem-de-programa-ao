@@ -1,0 +1,40 @@
+<html>
+	<body>
+		<head>
+			<meta charset="utf-8">
+			<title>	Exercício 2 </title>
+		</head>
+		<b>Faça um programa que receba duas notas, calcule e mostre a média aritmética e a mensagem que se encontra na tabela.</b>
+		<p>
+			n1 <input type="number" id="n1"/>
+			<br/>
+			n2 <input type="number" id="n2"/>
+			<br/>
+			<button onclick="brinca()"> Calcular </button>
+			<br/>
+			Média: 
+			<b id="media"> </b>
+			<br>
+			<script>
+				function brinca(){
+					var n1 = parseFloat(document.getElementById("n1").value);
+					var n2 = parseFloat(document.getElementById("n2").value);
+					var media;
+					media = (n1+n2)/2;
+					if (media < 3 ){
+						document.getElementById("media").innerHTML = media;
+						alert("REPROVADO");
+					}
+						else if ((media >= 3) && (media < 7)) {
+							document.getElementById("media").innerHTML = media;
+							alert("EXAME"); 
+						}
+							else {
+								document.getElementById("media").innerHTML = media;
+								alert("APROVADO")
+							}
+						}
+			</script>
+		</p>
+	</body>
+</html>

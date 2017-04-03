@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title> Exercício 10 </title>
+		<script>
+			function calcula(){
+				// recupera valor do usuário
+				var c = parseFloat(document.getElementById("custo").value);
+				// calcula valor do imposto
+				var imposto; var distribuicao;
+				if (c < 12000) {
+					imposto = 0;
+					distribuicao = (5+c)/100;
+				}
+				else if (c <= 25000) {
+						imposto = (15+c)/100;
+						distribuicao = (10+c)/100;
+					}
+					else {
+						imposto = (20+c)/100;
+						distribuicao = (15+c)/100;
+					}	
+				// calcula valor final ao consumidor
+				var final = c + imposto + distribuicao;
+				// calcula resultado no navegador
+				document.getElementById("resultado").innerHTML = final;
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercicio 10 </h1>
+		Custo de Fábrica <input type="number" name="custo"/>
+		<br>
+		<button onclick="calcula()">Calcular</button>
+		<br>
+		Valor do carro ao consumidor final
+		<br>
+		<p id="resultado">
+	</body>
+</html>
